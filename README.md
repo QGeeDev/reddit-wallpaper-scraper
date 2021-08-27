@@ -27,3 +27,7 @@ Settings for the project can be adjusted in _config.ini_.
     - Full file path to where the downloaded photos should be saved. This path does not need to exist, and will be created if not found
   - ```MinHeight``` and ```MinWidth```
     - Minimum height and width of the images to keep in pixels. All images will be downloaded, however will then be checked to see if they should be kept based on these criteria. To keep all images, set these values to 1.
+
+When run, the program will download all images found from the criteria defined above. 
+
+Set Windows to have Desktop Background as a Slideshow, select the destination folder as the album to use. This will give you new backgrounds whenever you want.
