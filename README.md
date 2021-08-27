@@ -7,6 +7,8 @@ This is a simple Python program written in Python 3.8.10 that scans subreddits f
 ## Requirements
 This project is built in Python 3.8.10. Additional Python modules used can be found in the file _requirements.txt_.
 
+To install all requirements, run ```pip install -r requirements.txt```
+
 ---
 ## Usage
 To run this project, run _app.py_. 
