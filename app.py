@@ -1,11 +1,13 @@
 from genericpath import exists
 import requests
 from configparser import ConfigParser
-import constants
 import wget
 from PIL import Image
 import os
 import pathlib
+
+REDDIT_URL = "https://www.reddit.com"
+SUBREDDIT_PREFIX = "/r/"
 
 class ConfigManager():
     def __init__(self, configFileName: str) -> None:
@@ -71,7 +73,7 @@ class RedditImageDownloader():
 
     def fetchSubredditPosts(self, subredditName):
         try:
-            redditURL = constants.REDDIT_URL + constants.SUBREDDIT_PREFIX + subredditName + f"/{self.config.getConfigSetting('requestData', 'listing')}.json?limit={self.config.getConfigSetting('requestData', 'max_images_per_sub')}&t={self.config.getConfigSetting('requestData', 'timeframe')}"
+            redditURL = REDDIT_URL + SUBREDDIT_PREFIX + subredditName + f"/{self.config.getConfigSetting('requestData', 'listing')}.json?limit={self.config.getConfigSetting('requestData', 'max_images_per_sub')}&t={self.config.getConfigSetting('requestData', 'timeframe')}"
             request = requests.get(redditURL, headers = {'User-agent': 'QG-Wallpaper-Ripper'})
             return request.json()
         except:
